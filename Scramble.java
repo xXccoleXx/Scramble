@@ -4,18 +4,15 @@ import java.io.File;
 public class Scramble {
 
     public static void main(String[] args) {
-        try {
-        File input = new File(args[0]);
-        File output = new File(args[1]);
-        Picture pic = new Picture(input);
-        scramble(pic, output);
+        // EDIT ONLY LINES 8 AND 9 WITH THE CORRECT FILE NAMES THEN RUN :)
+        File input = new File("inputFileName.jpg");
+        File output = new File("outputFileName.png");
+        scramble(input, output);
         System.out.println("Picture encrypted successfully");
-        } catch (Exception e) {
-            throw new IllegalArgumentException();
-        }
     }
 
-    public static Picture scramble(Picture pic, File file) {
+    public static Picture scramble(File input, File file) {
+        Picture pic = new Picture(input);
         pic = shuffleCol(pic);
         pic = shuffleRow(pic);
         pic.save(file);
@@ -206,3 +203,4 @@ public class Scramble {
     }
 
 }
+
