@@ -1,10 +1,17 @@
 import java.awt.Color;
 import java.io.File;
 
+/**
+ * Scramble program that visually encrypts a photo.
+ * Features symmetric encryption.
+ * @author Chase Coleman
+ * @version 7/11/22
+ */
+
 public class Scramble {
 
     public static void main(String[] args) {
-        // EDIT ONLY LINES 8 AND 9 WITH THE CORRECT FILE NAMES THEN RUN :)
+        // EDIT ONLY LINES 15 AND 16 WITH THE ABSOLUTE FILE PATHS THEN RUN :)
         File input = new File("inputFileName.jpg");
         File output = new File("outputFileName.png");
         scramble(input, output);
