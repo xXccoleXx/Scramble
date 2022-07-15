@@ -5,15 +5,15 @@ import java.io.File;
  * Scramble program that visually encrypts a photo.
  * Features symmetric encryption.
  * @author Chase Coleman
- * @version 7/11/22
+ * @version 7/15/22
  */
 
 public class Scramble {
 
     public static void main(String[] args) {
         // EDIT ONLY LINES 15 AND 16 WITH THE ABSOLUTE FILE PATHS THEN RUN :)
-        File input = new File("inputFileName.jpg");
-        File output = new File("outputFileName.png");
+        File input = new File("pictures/inputFileName.jpg");
+        File output = new File("pictures/outputFileName.png");
         scramble(input, output);
         System.out.println("Picture encrypted successfully");
     }
@@ -22,6 +22,7 @@ public class Scramble {
         Picture pic = new Picture(input);
         pic = shuffleCol(pic);
         pic = shuffleRow(pic);
+        pic = shuffleColor(pic);
         pic.save(file);
         return pic;
     }
@@ -48,6 +49,19 @@ public class Scramble {
         return toPicRow(scramCol, pic);
     }
 
+    public static Picture shuffleColor(Picture pic) {
+        int[] scram = getScramArray(256);
+        Picture shuffled = new Picture(pic);
+        for (int col = 0; col < pic.width(); col++) {
+            for (int row = 0; row < pic.height(); row++) {
+                Color defColor = pic.get(col, row);
+                Color shuffColor = new Color(scram[defColor.getRed()], scram[defColor.getGreen()], scram[defColor.getBlue()]);
+                shuffled.set(col, row, shuffColor);
+            }
+        }
+        return shuffled;
+    }
+    
     public static Picture toPicCol(Color[][] pixels, Picture pic) {
         int width = pixels.length;
         int height = pixels[0].length;
