@@ -1,7 +1,6 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="app.js"></script>
     <link rel="icon" href="https://s3.amazonaws.com/scrambleencryption.com/icon.png" type="image/x-icon">
   </head>
   <body>
@@ -23,10 +22,12 @@
     <div id="directions">
       <h1>Scramble your own Picture</h1>
       <p>
-        <form action="/upload" method="post" enctype="multipart/form-data">
-          <input type="file" name="picture" accept=".jpeg, .jpg, .png">
-          <input type="submit" value="Scramble">
+        <form action="">
+          <input type="file" id="file-input" name="picture" accept=".jpeg, .jpg, .png">
+          <input type="submit" id="submitButton" value="Scramble">
         </form>
+        
+        
       </p>
       <p>
         Psst... Scramble your scrambled pic again to unscramble!
@@ -38,11 +39,14 @@
 
     <div id="contact">
       <h1>
-        Scramble program and this website created proudly by Chase Coleman
+        Scramble program and this website created proudly 
+        by Chase Coleman and Patrick Dodds
         <br />
         Picture program provided through Princeton University by Robert
         Sedgewick and Kevin Wayne
       </h1>
     </div>
+    
+    <script src="App.js"></script>
   </body>
 </html>

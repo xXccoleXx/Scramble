@@ -1,0 +1,79 @@
+body {
+    margin: 0px auto;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    font-family: "Myriad Pro", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+    background-color: #566370;
+  }
+  #header {
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+  }
+  #header li {
+    display: inline-block;
+    margin-right: 25px;
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #header #site_name {
+    text-align: left;
+    width: 680px;
+    font-size: 35px;
+    margin-left: 20px;
+  }
+  #home,
+  #directions,
+  #example,
+  #contact {
+    margin-top: 40px;
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    padding: 30px;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    background-color: #092e52;
+    border-radius: 10px;
+    color: white;
+  }
+  #home h1 {
+    font-size: 40px;
+  }
+  
+  #home img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+  #home video {
+    max-width: 100%;
+    object-fit: contain;
+  }
+  #directions p {
+    font-size: 20px;
+  }
+  #contact input[type="text"] {
+    width: 250px;
+    height: 35px;
+    padding-left: 10px;
+    float: left;
+    margin-left: 80px;
+    border: none;
+  }
+  #contact textarea {
+    float: left;
+    width: 250px;
+    height: 35px;
+    margin-left: 20px;
+    border: none;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  
+  
